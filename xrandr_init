@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# Additional modeline configuration for Samsung SyncMaster T220 Monitor (1680x1050)
+#
+
+. xrandr.conf
+
+#$ cvt 1680 1050 60
+## 1680x1050 59.95 Hz (CVT 1.76MA) hsync: 65.29 kHz; pclk: 146.25 MHz
+#Modeline "1680x1050_60.00"  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync
+
+#xrandr --newmode "1680x1050" 146.25 1680 1784 1960 2240 1050 1053 1059 1089 +hsync -vsync
+
+# $ gtf 1680 1050 60
+#
+# 1680x1050 @ 60.00 Hz (GTF) hsync: 65.22 kHz; pclk: 147.14 MHz
+#    Modeline "1680x1050_60.00"  147.14  1680 1784 1968 2256  1050 1051 1054 1087  -HSync +Vsync
+
+xrandr --newmode "1680x1050" 147.14  1680 1784 1968 2256  1050 1051 1054 1087  -HSync +Vsync
+xrandr --addmode $VGA "1680x1050"

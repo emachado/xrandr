@@ -1,0 +1,5 @@
+#!/bin/sh
+
+. xrandr.conf
+
+xrandr --delmode $VGA 1680x1050

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+. xrandr.conf
+
+#xrandr --output $VGA --auto && \
+#xrandr --output $VGA --mode "1680x1050" --output $LVDS  --off && \
+#openbox --reconfigure
+
+xrandr --output $VGA --auto && \
+xrandr --output $LVDS --mode 1600x900 --output $VGA --mode "1680x1050" --above $LVDS && \
+openbox --reconfigure
